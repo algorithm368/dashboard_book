@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
+import PagesReadChartSection from "./Dashboard/components/PagesReadChartSecions";
 
 export default function Test() {
   return (
     <div>
-      <Navbar />
+      <PagesReadChartSection />
     </div>
   );
 }
