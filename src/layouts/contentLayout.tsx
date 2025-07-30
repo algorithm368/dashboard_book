@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ContentLayoutProps {
   children: React.ReactNode;
 }

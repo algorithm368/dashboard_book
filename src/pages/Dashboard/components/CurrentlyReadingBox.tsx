@@ -1,9 +1,17 @@
-import bookData from "../../../assets/data/bookData.json";
-import { getIncompleteBooks } from "../../../utils/getIncompleteBooks";
+interface Book {
+  title?: string;
+  author?: string;
+  genre?: string;
+  endDate?: string | null;
+  pagesRead: number;
+  totalPages: number;
+}
 
-function CurrentlyReadingBox() {
-  const books = getIncompleteBooks(bookData);
+interface CurrentlyReadingBoxProps {
+  readonly books: Book[];
+}
 
+function CurrentlyReadingBox({ books }: CurrentlyReadingBoxProps) {
   return (
     <div className="px-[16px] py-[8px] w-full min-h-[60px]">
       {books.map((book) => (

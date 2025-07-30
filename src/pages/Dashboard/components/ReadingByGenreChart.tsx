@@ -2,21 +2,41 @@ import {
   BarChart,
   Bar,
   XAxis,
-  YAxis,
   Tooltip,
   ResponsiveContainer,
-  CartesianGrid,
   LabelList,
 } from "recharts";
 
-function TopLineLabel({ x, y, width }) {
-  // Draw a horizontal line at the top of each bar
+function TopLineLabel({
+  x = 0,
+  y = 0,
+  width = 0,
+}: Readonly<{
+  x?: number | string;
+  y?: number | string;
+  width?: number | string;
+}>) {
+  const nx = Number(x) || 0;
+  const ny = Number(y) || 0;
+  const nwidth = Number(width) || 0;
   return (
-    <line x1={x} x2={x + width} y1={y} y2={y} stroke="#333" strokeWidth={2} />
+    <line
+      x1={nx}
+      x2={nx + nwidth}
+      y1={ny}
+      y2={ny}
+      stroke="#333"
+      strokeWidth={2}
+    />
   );
 }
 
-function ReadingByGenreChart({ data }) {
+interface GenreData {
+  genre: string;
+  count: number;
+}
+
+function ReadingByGenreChart({ data }: Readonly<{ data: GenreData[] }>) {
   return (
     <div className="gap-[24px] px-[12px] py-[0px]">
       <ResponsiveContainer width="100%" height={300}>

@@ -3,14 +3,15 @@ import bookData from "../assets/data/bookData.json";
 /**
  * Calculates the total number of pages read per month for the last 12 months,
  * based on the endDate of each finished book in the dataset.
- * 
+ *
  * @returns {Array} Array of objects, each representing a month (with month name, year, and total pages read).
  */
 export function getPageReadPerMonth() {
   // Gather all endDates from books that have been finished (endDate is not null)
   const endDates = bookData
     .filter((book) => book.endDate)
-    .map((book) => new Date(book.endDate));
+    .filter((book) => book.endDate !== null)
+    .map((book) => new Date(book.endDate!));
 
   // Determine the latest endDate in the dataset, or use today's date if there are no finished books
   const latest = endDates.length
@@ -49,6 +50,6 @@ export function getPageReadPerMonth() {
     }
   });
 
-    // Return the array of months with their corresponding total pages read
-    return months;
-  }
+  // Return the array of months with their corresponding total pages read
+  return months;
+}

@@ -5,7 +5,6 @@ import { getGenreCounts } from "../../../utils/getGenreCounts";
 const genreCounts = getGenreCounts(bookData);
 const genres = Object.keys(genreCounts);
 const counts = Object.values(genreCounts);
-const maxCount = Math.max(...counts);
 const totalGenres = genres.length;
 
 const chartData = genres.map((genre, index) => ({

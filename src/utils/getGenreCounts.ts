@@ -3,8 +3,13 @@
  * @param {Array} books - Array of book objects.
  * @returns {Object} - An object with genre as key and count as value.
  */
-export function getGenreCounts(books) {
-  const genreCounts = {};
+
+interface Book {
+  genre?: string;
+}
+
+export function getGenreCounts(books: Book[]): Record<string, number> {
+  const genreCounts: Record<string, number> = {};
   books.forEach((book) => {
     if (book.genre) {
       genreCounts[book.genre] = (genreCounts[book.genre] || 0) + 1;

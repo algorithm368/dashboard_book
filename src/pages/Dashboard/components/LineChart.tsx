@@ -14,7 +14,7 @@ interface LineChartProps {
 function LineChart({ data }: LineChartProps) {
   return (
     <ResponsiveContainer width="100%" height={200}>
-      <RechartsLineChart data={data}>
+      <RechartsLineChart data={[...data]}>
         <CartesianGrid stroke="#E5E8EB" strokeDasharray="3 3" />
         <XAxis dataKey="month" />
         <Tooltip />
