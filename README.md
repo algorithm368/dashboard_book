@@ -1,18 +1,26 @@
-Dashboard Book
-A modern dashboard web application for tracking and visualizing book reading progress, built with React, TypeScript, and Vite.
 
-Features
-📊 Interactive charts for pages read, reading by genre, and more
-📚 Track currently reading books and completion stats
-🧩 Modular component-based architecture
-⚡ Fast development with Vite and HMR
-🎨 Customizable layouts and responsive design
-Tech Stack
-React
-TypeScript
-Vite
-ESLint (with recommended configs)
-Project Structure
+# Dashboard Book
+
+A modern dashboard web application for tracking and visualizing book reading progress, built with **React**, **TypeScript**, and **Vite**.
+
+## Features
+
+- 📊 Interactive charts for pages read, reading by genre, and more
+- 📚 Track currently reading books and completion stats
+- 🧩 Modular component-based architecture
+- ⚡ Fast development with Vite and HMR
+- 🎨 Customizable layouts and responsive design
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- ESLint (with recommended configs)
+
+## Project Structure
+
+```
 dashboard_book/
 ├── public/                # Static assets
 ├── src/
@@ -27,31 +35,31 @@ dashboard_book/
 ├── tsconfig*.json
 ├── vite.config.ts
 └── eslint.config.js
- 
- 
-
-Getting Started
-
-Install dependencies:
-```sh
-npm install
 ```
 
-Run the development server:
-```sh
-npm run dev
-```
+## Getting Started
 
-Open your browser:
-Visit http://localhost:5173 (default Vite port).
+**Install dependencies:**
 
-Linting
- 
+    npm install
 
-or
+**Run the development server:**
 
-Customization
-Update bookData.json to change the book data.
-Modify or add components in components for new dashboard features.
-License
+    npm run dev
+
+Open your browser and visit: [http://localhost:5173](http://localhost:5173)
+
+## Linting
+
+To check code quality and formatting:
+
+    npm run lint
+
+## Customization
+
+- Update `src/assets/data/bookData.json` to change the book data.
+- Modify or add components in `src/components` for new dashboard features.
+
+## License
+
 MIT
