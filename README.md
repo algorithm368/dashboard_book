@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+Dashboard Book
+A modern dashboard web application for tracking and visualizing book reading progress, built with React, TypeScript, and Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+📊 Interactive charts for pages read, reading by genre, and more
+📚 Track currently reading books and completion stats
+🧩 Modular component-based architecture
+⚡ Fast development with Vite and HMR
+🎨 Customizable layouts and responsive design
+Tech Stack
+React
+TypeScript
+Vite
+ESLint (with recommended configs)
+Project Structure
+dashboard_book/
+├── public/                # Static assets
+├── src/
+│   ├── assets/            # Images and data (e.g., bookData.json)
+│   ├── components/        # Shared UI components (e.g., Navbar)
+│   ├── layouts/           # Layout components
+│   ├── pages/             # Page-level components (Dashboard, etc.)
+│   ├── utils/             # Utility functions
+│   ├── AppRoutes.tsx      # App routing
+│   └── main.tsx           # App entry point
+├── package.json
+├── tsconfig*.json
+├── vite.config.ts
+└── eslint.config.js
+ 
+ 
 
-Currently, two official plugins are available:
+Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install dependencies:
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Run the development server:
+```sh
+npm run dev
 ```
+
+Open your browser:
+Visit http://localhost:5173 (default Vite port).
+
+Linting
+ 
+
+or
+
+Customization
+Update bookData.json to change the book data.
+Modify or add components in components for new dashboard features.
+License
+MIT
