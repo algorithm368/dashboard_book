@@ -5,7 +5,7 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard_book" element={<Dashboard />} />
         {/* <Route path='/test' element={<Test />} /> */}
         {/* <Route path="/book" element={<Book />} /> */}
         {/* <Route path="/goal" element={<Goal />} /> */}
