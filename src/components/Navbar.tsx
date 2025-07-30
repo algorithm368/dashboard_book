@@ -1,18 +1,29 @@
+// Navbar.tsx
+// This component renders the top navigation bar for the BookTracker application.
+// It includes the application logo, navigation menu items, a notification button, and the user's avatar.
+// The component uses Tailwind CSS for styling and React.memo for performance optimization.
+
 import React from "react";
 import avatar from "../assets/avatar.png";
 import icon from "../assets/icon.png";
 
+// List of navigation menu items displayed in the navbar
 const menuItems = ["Dashboard", "Books", "Goals", "Community"];
 
+// Navbar component definition
 const Navbar: React.FC = React.memo(() => (
   <nav className="w-full flex items-center border-g bg-[#FFFFFF] shadow-sm px-[40px] py-[12px]">
-    {/* Left Side: Logo */}
+    {/* Left Side: Logo and App Name */}
     <div className="flex items-center font-bold text-[18px] text-blue-gray gap-[16px]">
-      <img src={icon} alt="Logo Icon" className="w-4 h-4 mr-2" /> BookTracker
+      {/* Application logo icon */}
+      <img src={icon} alt="Logo Icon" className="w-4 h-4 mr-2" />
+      {/* Application name */}
+      BookTracker
     </div>
 
-    {/* Right Side: Menu Items + Notification + Avatar */}
+    {/* Right Side: Navigation Menu, Notification Button, and User Avatar */}
     <div className="flex items-center gap-6 ml-auto">
+      {/* Navigation menu items */}
       <ul className="flex gap-6 text-sm text-[#0D141C] gap-[36px]">
         {menuItems.map((item) => (
           <li key={item} className="hover:text-black cursor-pointer">
@@ -20,10 +31,12 @@ const Navbar: React.FC = React.memo(() => (
           </li>
         ))}
       </ul>
+      {/* Notification bell button */}
       <button
         className="relative flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-2xl w-[40px] h-[40px] overflow-visible"
         aria-label="Notifications"
       >
+        {/* Bell icon SVG */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -39,6 +52,7 @@ const Navbar: React.FC = React.memo(() => (
           />
         </svg>
       </button>
+      {/* User avatar image */}
       <img
         src={avatar}
         alt="User Avatar"
