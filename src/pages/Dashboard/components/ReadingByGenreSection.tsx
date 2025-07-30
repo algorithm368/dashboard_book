@@ -4,7 +4,7 @@ import { getGenreCounts } from "../../../utils/getGenreCounts";
 
 const genreCounts = getGenreCounts(bookData);
 const genres = Object.keys(genreCounts);
-const counts = Object.values(genreCounts);
+const counts = Object.values(genreCounts); // TypeScript infers number[]
 const totalGenres = genres.length;
 
 const chartData = genres.map((genre, index) => ({
@@ -15,7 +15,7 @@ const chartData = genres.map((genre, index) => ({
 
 function ReadingByGenreSection() {
   return (
-    <div className="w-[960px] gap-[16px] px-[16px] py-[24px]">
+    <div className="w-full gap-[16px] px-[16px] py-[24px]">
       <div className="p-[24px] gap-[8px] align-left border border-[#CFDBE8] rounded-[8px]">
         <div className="text-[#0D141C] text-[16px] font-medium line-height-[24px] letter-spacing-[0px]">
           Book by Genre

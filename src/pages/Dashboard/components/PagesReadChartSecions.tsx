@@ -5,7 +5,7 @@ const data = getPageReadPerMonth();
 
 function PagesReadChartSection() {
   return (
-    <div className="w-[960px] gap-[16px] px-[16px] py-[24px]">
+    <div className="w-full gap-[16px] px-[16px] py-[24px]">
       <div className="gap-[8px] p-[24px] gap-[8px] bg-white rounded-[8px] border border-[#E5E8EB]">
         <div
           className="text-[#0D141C] text-[16px]
